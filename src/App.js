@@ -1,11 +1,16 @@
 import './App.css';
+import Footer from './Footer';
+import Weather from "./Weather"
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>Hello from React</h1>
+      <div className="container">
+      <Weather />
+      <Footer />
+      </div>
     </div>
   );
 }
 
-export default App;
+
