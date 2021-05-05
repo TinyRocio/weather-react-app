@@ -1,8 +1,7 @@
-.App {
+.App .container {
   display: block;
+  max-width: 600px;
   border: 1px solid red;
   border-radius: 15px;
-  max-width: 500px;
-  margin: 10px auto;
-  padding: 5px auto;
+  margin-top: 25px;
 }

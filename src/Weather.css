@@ -1,5 +1,12 @@
 .Weather {
   font-size: 22px;
+  margin: 10px auto;
+  padding: 5px auto;
+}
+
+.Weather ul {
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 .Weather li {
