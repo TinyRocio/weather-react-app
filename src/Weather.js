@@ -1,7 +1,19 @@
 import React from "react";
+import axios from "axios";
+
 import "./Weather.css";
 
-export default function Weather(){
+export default function Weather(props){
+    //const [weatherData, setWeatherData] = useState = ({ready:false});
+
+    let apiKey ="4005c7ae924df34c8466814b255e9b64"
+    let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultcity}&appid=${apiKey}`
+    axios.get(apiUrl).then(showResponse);
+
+    function showResponse(response){
+        console.log(response.data.sys)
+    }
+
     return (
         <div className="Weather">
             <form>
@@ -32,7 +44,7 @@ export default function Weather(){
                     <button 
                     type="submit" 
                     className="btn btn-primary">
-                        <i class="fas fa-map-pin"></i>
+                        <i className="fas fa-map-pin"></i>
                         </button>
                 </div>
                 </div>
