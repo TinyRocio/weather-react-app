@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import "./Weather.css";
 
 export default function Weather(props){
-    //const [weatherData, setWeatherData] = useState = ({ready:false});
+    const [weatherData, setWeatherData] = useState({ready:false});
 
-    let apiKey ="4005c7ae924df34c8466814b255e9b64"
-    let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultcity}&appid=${apiKey}`
-    axios.get(apiUrl).then(showResponse);
-
+    
     function showResponse(response){
-        console.log(response.data.sys)
+        setWeatherData({
+          ready : true,
+          city: response.data.name,
+          date:"May, 4, 2021 Tuesday 05:30pm",
+          temperature : response.data.main.temp,
+          feelslike: response.data.main.feels_like,
+          humidity: response.data.main.humidity,
+          description: response.data.weather[0].description,
+          iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+        })
     }
 
-    return (
+    if (weatherData.ready){
+      return (
         <div className="Weather">
             <form>
             <div className="row">
@@ -51,15 +58,15 @@ export default function Weather(props){
             </form>
             <div className="row">
                 <div className="col-6">
-                <h1 className="location">New York</h1>
+                <h1 className="location">{weatherData.city}</h1>
                 </div>
                 <div className="col-6">
             <ul>
                         <li className="weathericon">
                             <img 
-                            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                            alt="sunny" />
-                            75°F
+                            src={weatherData.iconUrl}
+                            alt={weatherData.description} />
+                            {Math.round(weatherData.temperature)}°F
                         </li>
             </ul>
                 </div>
@@ -68,18 +75,26 @@ export default function Weather(props){
                 <div className="col-6">
                     <ul>
                 <li>Last Updated:</li>
-                <li className="date">May, 4, 2021</li>
-                <li className="time">Tuesday 05:30pm</li>
+                <li className="date">{weatherData.date}</li>
                     </ul>
                 </div>
                 <div className="col-6">
                     <ul>
-                            <li>Sunny</li>
-                            <li>Feels Like: 80°F</li>
-                            <li>Humidity: 15%</li>
+                            <li className="text-capitalize">{weatherData.description}</li>
+                            <li>Feels Like: {Math.round(weatherData.feelslike)}°F</li>
+                            <li>Humidity: {Math.round(weatherData.humidity)}%</li>
                     </ul>
                 </div>
             </div>
             </div>
-    )
-}
+    );
+  } else {
+
+    let apiKey ="4005c7ae924df34c8466814b255e9b64"
+    let units = "imperial" 
+    let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultcity}&appid=${apiKey}&units=${units}`
+    axios.get(apiUrl).then(showResponse);
+    
+    return "Loading....";
+  }
+  }
