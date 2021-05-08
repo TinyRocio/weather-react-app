@@ -14,8 +14,26 @@
   list-style: none;
 }
 
-.Weather .location {
-  font-size: 48px;
-  font-weight: bolder;
-  text-transform: capitalize;
+.Weather .searchform {
+  border-radius: 15px;
+}
+
+.Weather .searchButton,
+.currentButton {
+  color: #00aeff;
+  border-radius: 20px;
+  background: transparent;
+  transition: ease-in-out, 200ms, transparent;
+}
+
+.Weather .searchButton:hover {
+  cursor: pointer;
+  color: #a1dffb;
+  background: transparent;
+}
+
+.Weather .currentButton:hover {
+  cursor: pointer;
+  color: #a1dffb;
+  background: transparent;
 }

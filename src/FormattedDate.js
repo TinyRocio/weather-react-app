@@ -43,7 +43,7 @@ export default function FormattedDate(props){
         <div className="FormattedDate">
             <ul>
             <li>
-            {month},{date},{year} 
+            {month}, {date}, {year} 
             </li>
             <li>
                 {day} {hours}:{minutes}

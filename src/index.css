@@ -1,3 +1,8 @@
 body {
+  background-image: url(https://mocah.org/thumbs/4584088-star-wars-death-star-artwork-space-purple-star-wars-episode-vi-the-return-of-the-jedi-science-fiction-space-art.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
 }

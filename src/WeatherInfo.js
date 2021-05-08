@@ -12,6 +12,8 @@ export default function WeatherInfo(props){
                 <div className="col">
                 <h1 className="location">{props.data.city}</h1>
                 </div>
+        </div>
+        <div className="row">
                 <div className="col">
                   <div className="float-right">
                           <WeatherIcon code={props.data.icon}/>
@@ -22,7 +24,7 @@ export default function WeatherInfo(props){
                     <CurrentTemperature fahrenheit={props.data.temperature} />
                   </div>
                 </div>
-            </div>
+        </div>
             <div className="row">
                 <div className="col-6">
                     <ul>

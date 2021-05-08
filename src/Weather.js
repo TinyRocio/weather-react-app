@@ -46,12 +46,12 @@ export default function Weather(props){
         <div className="Weather">
             <form onSubmit={handleSubmit}>
             <div className="row">
-                <div className="col-6">
+                <div className="col-7">
                 <input 
                 type="search" 
                 placeholder="Enter a City ..." 
                 autoFocus="on" 
-                className="form-control"
+                className="form-control searchform"
                 list="datalistOptions"
                 id="exampleDataList"
                 onChange={updateCityChange}
@@ -63,20 +63,18 @@ export default function Weather(props){
                   <option value="Chicago" />
                 </datalist>
                 </div>
-                <div className="col-3">
-                <button 
+                <div className="col-4">
+                <input
                 type="submit" 
-                className="btn btn-primary">
-                    Search
-                    </button>
+                value="Search"
+                className="searchButton btn btn-dark btn-outline-light w-100"
+                />
                     </div>
-                    <div className="col-2">
                     <button 
                     type="submit" 
-                    className="btn btn-primary">
+                    className="searchButton btn btn-dark btn-outline-light">
                         <i className="fas fa-map-pin"></i>
                         </button>
-                </div>
                 </div>
             </form>
             <WeatherInfo data={weatherData} />
