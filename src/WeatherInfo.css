@@ -1,0 +1,7 @@
+.WeatherInfo {
+  margin-top: 20px;
+}
+
+.WeatherInfo .location {
+  text-align: center;
+}

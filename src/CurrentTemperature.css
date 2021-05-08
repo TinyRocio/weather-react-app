@@ -1,0 +1,9 @@
+.CurrentTemperature .temperature {
+  font-size: 60px;
+}
+
+.CurrentTemperature .units {
+  position: relative;
+  top: -30px;
+  font-size: 18px;
+}
