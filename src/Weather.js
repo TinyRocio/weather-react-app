@@ -70,11 +70,6 @@ export default function Weather(props){
                 className="searchButton btn btn-dark btn-outline-light w-100"
                 />
                     </div>
-                    <button 
-                    type="submit" 
-                    className="searchButton btn btn-dark btn-outline-light">
-                        <i className="fas fa-map-pin"></i>
-                        </button>
                 </div>
             </form>
             <WeatherInfo data={weatherData} />

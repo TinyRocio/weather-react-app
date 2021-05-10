@@ -18,21 +18,14 @@
   border-radius: 15px;
 }
 
-.Weather .searchButton,
-.currentButton {
+.Weather .searchButton {
   color: #00aeff;
-  border-radius: 20px;
+  border-radius: 25px;
   background: transparent;
   transition: ease-in-out, 200ms, transparent;
 }
 
 .Weather .searchButton:hover {
-  cursor: pointer;
-  color: #a1dffb;
-  background: transparent;
-}
-
-.Weather .currentButton:hover {
   cursor: pointer;
   color: #a1dffb;
   background: transparent;
