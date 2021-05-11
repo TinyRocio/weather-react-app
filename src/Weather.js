@@ -12,10 +12,12 @@ export default function Weather(props){
 
     
     function showResponse(response){
+      console.log(response)
         setWeatherData({
           ready : true,
           city: response.data.name,
-          date:new Date(response.data.dt * 1000),
+          coordinates: response.data.coord,
+          date: new Date(response.data.dt * 1000),
           temperature : response.data.main.temp,
           feelslike: response.data.main.feels_like,
           humidity: response.data.main.humidity,
@@ -75,7 +77,7 @@ export default function Weather(props){
                 </div>
             </form>
             <WeatherInfo data={weatherData} />
-            <WeeklyForecast />
+            <WeeklyForecast coordinates={weatherData.coordinates}/>
             </div>
     );
   } else {
