@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import WeatherInfo from "./WeatherInfo"
+import WeeklyForecast from "./WeeklyForecast"
 
 import "./Weather.css";
 
@@ -61,6 +62,7 @@ export default function Weather(props){
                   <option value="Seattle" />
                   <option value="Los Angeles" />
                   <option value="Chicago" />
+                  <option value="Mexico" />
                 </datalist>
                 </div>
                 <div className="col-4">
@@ -73,6 +75,7 @@ export default function Weather(props){
                 </div>
             </form>
             <WeatherInfo data={weatherData} />
+            <WeeklyForecast />
             </div>
     );
   } else {
