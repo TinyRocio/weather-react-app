@@ -21,13 +21,13 @@ export default function Weather(props){
           feelslike: response.data.main.feels_like,
           humidity: response.data.main.humidity,
           description: response.data.weather[0].description,
-          icon: response.data.weather[0].icon
+          icon: response.data.weather[0].icon,
         })
     }
 
     function search(){
 
-    let apiKey ="833faa4e5adfbac35281e0409e2d28ea"
+    let apiKey ="987aa406ce6d3749195591176df58a2d"
     let units = "imperial" 
     let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
     axios.get(apiUrl).then(showResponse);
@@ -54,8 +54,6 @@ export default function Weather(props){
                 placeholder="Enter a City ..." 
                 autoFocus="on" 
                 className="form-control searchform"
-                list="datalistOptions"
-                id="exampleDataList"
                 onChange={updateCityChange}
                 />
                 </div>

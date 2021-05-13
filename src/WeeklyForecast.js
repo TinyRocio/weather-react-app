@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 
@@ -9,6 +9,10 @@ export default function WeeklyForecast(props){
   const [charged, setCharged] =useState(false)
   const [forecast, setForecast] = useState(null)
 
+  useEffect(() => {
+    setCharged(false);
+  }, [props.coordinates])
+
   function displyForecast(response){
     setForecast(response.data.daily)
     setCharged(true)
@@ -18,15 +22,23 @@ export default function WeeklyForecast(props){
     return (
       <div className="WeeklyForecast">
             <div className="row">
-                <div className="col">
-                  <WeeklyForecastInfo data={forecast[0]}/>
+              {forecast.map(function (weeklyforecast, index){
+                if (index < 6){
+                  return (
+                <div className="col-4" key= {index}>
+                  <WeeklyForecastInfo data={weeklyforecast}/>
                 </div>
+                  )
+                } else {
+                  return null
+                }
+              })}
             </div>
         </div>
     )
   } else {
 
-  let apiKey ="833faa4e5adfbac35281e0409e2d28ea"
+  let apiKey ="987aa406ce6d3749195591176df58a2d"
   let lat = props.coordinates.lat
   let lon = props.coordinates.lon
   let units = "imperial" 

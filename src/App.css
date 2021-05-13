@@ -1,7 +1,7 @@
 .App .container {
   display: block;
   box-shadow: 1px 1px 15px #a1dffb;
-  max-width: 575px;
+  max-width: 550px;
   border: 1px solid whitesmoke;
   border-radius: 15px;
   margin-top: 25px;

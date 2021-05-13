@@ -25,6 +25,7 @@ export default function WeatherInfo(props){
                   </div>
                 </div>
         </div>
+        <div className="CurrentDayTime">
             <div className="row">
                 <div className="col-6">
                     <ul>
@@ -33,13 +34,14 @@ export default function WeatherInfo(props){
                   <FormattedDate date={props.data.date}/>
                 </div>
                 <div className="col-6">
-                    <ul>
+                    <ul className="CurrentDayInfo">
                             <li className="text-capitalize">{props.data.description}</li>
                             <li>Feels Like: {Math.round(props.data.feelslike)}°F</li>
                             <li>Humidity: {Math.round(props.data.humidity)}%</li>
                     </ul>
                 </div>
             </div>
+        </div>
                             </div>
     )
 }

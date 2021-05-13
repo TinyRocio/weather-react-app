@@ -6,3 +6,8 @@
   text-align: center;
   font-size: 70px;
 }
+
+.WeatherInfo .CurrentDayInfo {
+  text-align: left;
+  font-size: 20px;
+}
