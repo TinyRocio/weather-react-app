@@ -12,7 +12,6 @@ export default function Weather(props){
 
     
     function showResponse(response){
-      console.log(response)
         setWeatherData({
           ready : true,
           city: response.data.name,
@@ -28,7 +27,7 @@ export default function Weather(props){
 
     function search(){
 
-    let apiKey ="4005c7ae924df34c8466814b255e9b64"
+    let apiKey ="833faa4e5adfbac35281e0409e2d28ea"
     let units = "imperial" 
     let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
     axios.get(apiUrl).then(showResponse);
@@ -59,13 +58,6 @@ export default function Weather(props){
                 id="exampleDataList"
                 onChange={updateCityChange}
                 />
-                <datalist id="datalistOptions">
-                  <option value="San Francisco" />
-                  <option value="Seattle" />
-                  <option value="Los Angeles" />
-                  <option value="Chicago" />
-                  <option value="Mexico" />
-                </datalist>
                 </div>
                 <div className="col-4">
                 <input
