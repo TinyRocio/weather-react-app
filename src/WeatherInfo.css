@@ -4,8 +4,7 @@
 
 .WeatherInfo .location {
   text-align: center;
-  font-size: 70px;
-  margin-top: -29px;
+  font-size: 80px;
 }
 
 .WeatherInfo .CurrentDayWeather {

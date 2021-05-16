@@ -34,7 +34,7 @@ export default function WeeklyForecastInfo(props){
                        {day()}
                      </div>
                 <WeatherIcon code={props.data.weather[0].icon} size={55} />
-                  <h6>Max / Min</h6> 
+                  <div className="maxmin">Max / Min</div> 
                   <div className="Weekly-Temps">
                       <span className="Weekly-Max-Temp">
                           {maxTemp()}
@@ -43,6 +43,7 @@ export default function WeeklyForecastInfo(props){
                       <span className="Weekly-Min-Temp">
                           {minTemp()}
                       </span>
+                      <hr/>
            </div>
         </div>
     )
