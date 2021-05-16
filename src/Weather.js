@@ -34,6 +34,15 @@ export default function Weather(props){
     
     }
 
+    function searchLocation(position){
+      let apiKey="987aa406ce6d3749195591176df58a2d"
+      let lat= position.coords.latitude
+      let lon=position.coords.longitude
+      let units="imperial"
+      let apiUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`
+      axios.get(apiUrl).then(showResponse)
+    }
+
     function updateCityChange(event){
       setCity(event.target.value)
     }
@@ -43,12 +52,17 @@ export default function Weather(props){
       search()
     }
 
+    function displayLocation(event){
+      event.preventDefault()
+      navigator.geolocation.getCurrentPosition(searchLocation)
+    }
+
     if (weatherData.ready){
       return (
         <div className="Weather">
             <form onSubmit={handleSubmit}>
             <div className="row">
-                <div className="col-7">
+                <div className="col-6">
                 <input 
                 type="search" 
                 placeholder="Enter a City ..." 
@@ -61,8 +75,17 @@ export default function Weather(props){
                 <input
                 type="submit" 
                 value="Search"
-                className="searchButton btn btn-dark btn-outline-light w-100"
+                className="searchButton btn btn-outline-light w-100"
                 />
+                    </div>
+                <div className="col-2">
+                <button
+                  id="current-location"
+                  className="currentButton btn btn-outline-light w-100"
+                  onClick={displayLocation}
+                >
+                  <i className="fas fa-map-marker"></i>
+                </button>
                     </div>
                 </div>
             </form>

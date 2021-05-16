@@ -7,7 +7,7 @@
 .Weather ul {
   margin: 0 auto;
   padding: 0 auto;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .Weather li {
@@ -18,15 +18,21 @@
   border-radius: 15px;
 }
 
-.Weather .searchButton {
-  color: #00aeff;
-  border-radius: 25px;
+.Weather .searchButton .currentLocationButton {
+  color: white;
+  border-radius: 29px;
   background: transparent;
   transition: ease-in-out, 200ms, transparent;
 }
 
 .Weather .searchButton:hover {
   cursor: pointer;
-  color: #a1dffb;
+  color: purple;
+  background: transparent;
+}
+
+.Weather .currentLocationButton:hover {
+  cursor: pointer;
+  color: purple;
   background: transparent;
 }

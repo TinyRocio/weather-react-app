@@ -5,9 +5,14 @@
 .WeatherInfo .location {
   text-align: center;
   font-size: 70px;
+  margin-top: -29px;
+}
+
+.WeatherInfo .CurrentDayWeather {
+  margin-top: 20px;
 }
 
 .WeatherInfo .CurrentDayInfo {
-  text-align: left;
-  font-size: 20px;
+  font-size: 50px;
+  text-align: right;
 }

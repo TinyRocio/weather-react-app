@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function FormattedDate(props){
     
     let months =["January", 
@@ -42,6 +43,7 @@ export default function FormattedDate(props){
     return(
         <div className="FormattedDate">
             <ul>
+            <li>Last Updated:</li>
             <li>
             {month}, {date}, {year} 
             </li>

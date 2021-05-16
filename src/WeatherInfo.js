@@ -13,10 +13,11 @@ export default function WeatherInfo(props){
                 <h1 className="location">{props.data.city}</h1>
                 </div>
         </div>
+        <div className="CurrentDayWeather">
         <div className="row">
                 <div className="col">
                   <div className="float-right">
-                          <WeatherIcon code={props.data.icon} size={100}/>
+                          <WeatherIcon code={props.data.icon} size={145}/>
                   </div>
                 </div>
                 <div className="col">
@@ -25,16 +26,14 @@ export default function WeatherInfo(props){
                   </div>
                 </div>
         </div>
-        <div className="CurrentDayTime">
+        </div>
             <div className="row">
                 <div className="col-6">
-                    <ul>
-                <li>Last Updated:</li>
-                    </ul>
                   <FormattedDate date={props.data.date}/>
                 </div>
                 <div className="col-6">
-                    <ul className="CurrentDayInfo">
+                  <div className="CurrentDayInfo">
+                    <ul>
                             <li className="text-capitalize">{props.data.description}</li>
                             <li>Feels Like: {Math.round(props.data.feelslike)}°F</li>
                             <li>Humidity: {Math.round(props.data.humidity)}%</li>
@@ -42,6 +41,6 @@ export default function WeatherInfo(props){
                 </div>
             </div>
         </div>
-                            </div>
+         </div>
     )
 }
