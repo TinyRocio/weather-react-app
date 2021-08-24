@@ -1,12 +1,12 @@
 .WeatherInfo {
-  margin-top: 20px;
+  margin: 65px 58px 0px 0px;
   display: flex;
   flex-direction: row;
 }
 
 .WeatherInfo .location {
   text-align: center;
-  font-size: 70px;
+  font-size: 83px;
 }
 
 .WeatherInfo .CurrentDayWeather {
