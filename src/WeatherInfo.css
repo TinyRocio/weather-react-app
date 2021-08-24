@@ -17,3 +17,8 @@
   font-size: 50px;
   text-align: right;
 }
+
+.WeatherInfo .formatteddate {
+  text-align: start;
+  margin-left: -20px;
+}

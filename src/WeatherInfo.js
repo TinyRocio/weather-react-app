@@ -28,10 +28,10 @@ export default function WeatherInfo(props){
         </div>
         </div>
             <div className="row">
-                <div className="col-6">
+                <div className="col formatteddate">
                   <FormattedDate date={props.data.date}/>
                 </div>
-                <div className="col-6">
+                <div className="col">
                   <div className="CurrentDayInfo">
                     <ul>
                             <li className="text-capitalize">{props.data.description}</li>
