@@ -10,7 +10,7 @@
 }
 
 .WeatherInfo .CurrentDayWeather {
-  margin-top: 20px;
+  margin: 0px -55px 0px 45px;
 }
 
 .WeatherInfo .CurrentDayInfo {

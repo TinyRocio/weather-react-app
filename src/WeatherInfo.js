@@ -16,12 +16,12 @@ export default function WeatherInfo(props){
         <div className="CurrentDayWeather">
         <div className="row">
                 <div className="col">
-                  <div className="float-right">
+                  <div>
                           <WeatherIcon code={props.data.icon} size={145}/>
                   </div>
                 </div>
                 <div className="col">
-                  <div className="float-left">
+                  <div>
                     <CurrentTemperature fahrenheit={props.data.temperature} />
                   </div>
                 </div>
