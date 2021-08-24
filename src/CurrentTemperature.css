@@ -1,12 +1,12 @@
 .CurrentTemperature .temperature {
   font-size: 100px;
   position: relative;
-  top: -45px;
+  top: -23px;
   margin: 0px 0px 30px 30px;
 }
 
 .CurrentTemperature .units {
   position: relative;
-  top: -92px;
+  top: -81px;
   font-size: 30px;
 }
