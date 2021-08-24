@@ -9,7 +9,6 @@ export default function Footer(){
                 Open-Sourced Code </a> 
                 by
                 <a href="https://www.linkedin.com/in/rocio-valenzuela-4b3069104/"> Rocio Valenzuela</a>
-                <br/>
                 artwork from 
                 <a href="https://www.deviantart.com/albumforsoul"> deviantart</a>
             </p>

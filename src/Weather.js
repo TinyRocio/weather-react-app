@@ -75,13 +75,13 @@ export default function Weather(props){
                 <input
                 type="submit" 
                 value="Search"
-                className="searchButton btn btn-outline-light w-100"
+                className="searchButton btn btn-outline-light"
                 />
                     </div>
                 <div className="col-2">
                 <button
                   id="current-location"
-                  className="currentButton btn btn-outline-light w-100"
+                  className="currentButton btn btn-outline-light"
                   onClick={displayLocation}
                 >
                   <i className="fas fa-map-marker"></i>
