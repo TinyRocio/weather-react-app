@@ -17,12 +17,15 @@
   border-radius: 15px;
 }
 
+.Weather .searchButton {
+  padding: 30px 50px;
+}
+
 .Weather .searchButton .currentLocationButton {
   color: white;
   border-radius: 29px;
   background: transparent;
   transition: ease-in-out, 200ms, transparent;
-  padding: 6px 11px;
 }
 
 .Weather .searchButton:hover {
