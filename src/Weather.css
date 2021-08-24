@@ -23,12 +23,12 @@
   margin: 10px 0px 0px 50px;
 }
 
-.Weather .currentLocationButton {
+.Weather .currentButton {
   padding: 9px 70px;
   margin: 10px 0px 0px 50px;
 }
 
-.Weather .searchButton .currentLocationButton {
+.Weather .searchButton .currentButton {
   color: white;
   border-radius: 29px;
   background: transparent;
@@ -41,7 +41,7 @@
   background: transparent;
 }
 
-.Weather .currentLocationButton:hover {
+.Weather .currentButton:hover {
   cursor: pointer;
   color: purple;
   background: transparent;
