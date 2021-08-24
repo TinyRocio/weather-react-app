@@ -15,10 +15,17 @@
 
 .Weather .searchform {
   border-radius: 15px;
+  margin: 10px 0px 0px 30px;
 }
 
 .Weather .searchButton {
-  padding: 30px 50px;
+  padding: 9px 70px;
+  margin: 10px 0px 0px 50px;
+}
+
+.Weather .currentLocationButton {
+  padding: 9px 70px;
+  margin: 10px 0px 0px 50px;
 }
 
 .Weather .searchButton .currentLocationButton {
