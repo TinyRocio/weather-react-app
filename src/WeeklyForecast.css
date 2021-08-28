@@ -12,10 +12,3 @@
   display: flex;
   flex-direction: row;
 }
-
-@media (min-width: 576px) {
-  .WeeklyForecast .row {
-    display: flex;
-    flex-direction: column;
-  }
-}
