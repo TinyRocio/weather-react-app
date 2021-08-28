@@ -25,7 +25,7 @@ export default function WeeklyForecast(props){
               {forecast.map(function (weeklyforecast, index){
                 if (index < 6){
                   return (
-                <div className="col-md-4" key= {index}>
+                <div className="col-sm-4" key= {index}>
                   <WeeklyForecastInfo data={weeklyforecast}/>
                 </div>
                   )
