@@ -9,3 +9,16 @@
   font-weight: bolder;
   max-height: 732px;
 }
+
+@media (min-width: 576px) {
+  .App .container {
+    display: block;
+    box-shadow: 1px 1px 15px 3px #a1dffb;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+    margin-top: 35px;
+    color: white;
+    font-family: "Texturina", serif, "Permanent Marker", cursive;
+    font-weight: bolder;
+  }
+}
