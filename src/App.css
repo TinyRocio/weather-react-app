@@ -10,7 +10,7 @@
   max-height: 732px;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .App .container {
     max-width: 100%;
   }
