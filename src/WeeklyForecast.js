@@ -21,11 +21,11 @@ export default function WeeklyForecast(props){
   if (charged) {
     return (
       <div className="WeeklyForecast">
-            <div className="row">
+            <div className="row row-cols-md-3">
               {forecast.map(function (weeklyforecast, index){
                 if (index < 6){
                   return (
-                <div className="col-lg-2 col-sm-4" key= {index}>
+                <div className="col" key= {index}>
                   <WeeklyForecastInfo data={weeklyforecast}/>
                 </div>
                   )
