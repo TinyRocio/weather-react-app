@@ -8,6 +8,7 @@
   font-family: "Texturina", serif, "Permanent Marker", cursive;
   font-weight: bolder;
   max-height: 732px;
+  max-width: 100%;
 }
 
 @media (max-width: 576px) {
