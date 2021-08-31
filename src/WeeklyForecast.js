@@ -21,7 +21,7 @@ export default function WeeklyForecast(props){
   if (charged) {
     return (
       <div className="WeeklyForecast">
-            <div className="row row-cols-sm-3">
+            <div className="row">
               {forecast.map(function (weeklyforecast, index){
                 if (index < 6){
                   return (
