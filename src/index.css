@@ -4,23 +4,3 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
-
-@media (max-width: 576px) {
-  .App .container {
-    max-height: 100%;
-  }
-
-  .Weather .searchform {
-    margin-top: 10px;
-    padding: 9px 40px;
-  }
-
-  .Weather .searchButton {
-    margin-top: 10px;
-    padding: 9px 40px;
-  }
-
-  .Weather .currentButton {
-    margin: 10px 0px 0px -19px;
-  }
-}
